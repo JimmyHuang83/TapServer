@@ -51,5 +51,5 @@ class ConstTableManager:
         pvpRankTimerRewardTable.initData()
         pvpFightRewardTable.initData()
         pvpShopTable.initData()
-        drawRewardManager.initData()
-        openServerTable.initData()
+#        drawRewardManager.initData()
+#        openServerTable.initData()
