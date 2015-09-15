@@ -23,7 +23,7 @@ class DBManager:
         return True
 
     def openDB(self):
-        self.conn = pymysql.connect(host='127.0.0.1', port=3306,  user='taptitan',  passwd='taptitan123321',  db=serverConfigManager.getDBName(),charset="utf8")
+        self.conn = pymysql.connect(host='127.0.0.1', port=3306,  user='root',  passwd='jimmy123',  db=serverConfigManager.getDBName(),charset="utf8")
         self.cur = self.conn.cursor()
         print("openDB!")
 
