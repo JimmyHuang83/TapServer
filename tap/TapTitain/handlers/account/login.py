@@ -89,28 +89,6 @@ class SignHandler(tornado.web.RequestHandler):
         max_length = gloabalBase.getValue('MAX_LENGTH_OF_NAME')
         max_length = int(max_length)
 
-        # CDKEY验证
-        if open_activate is True:
-            cdkey = cdkey.lower()
-            if not cdkey:
-                returnData = MessData(ErrorCode.have_not_activate_cdkey)
-                self.write(MessageTools.encode(returnData))
-                self.finish()
-                return
-
-            cdkey_obj = AccountCDkey.get_cdkey(cdkey=cdkey)
-            if not cdkey_obj:
-                returnData = MessData(ErrorCode.activate_cdkey_error)
-                self.write(MessageTools.encode(returnData))
-                self.finish()
-                return
-
-            if cdkey_obj.is_use is True:
-                returnData = MessData(ErrorCode.activate_cdkey_error)
-                self.write(MessageTools.encode(returnData))
-                self.finish()
-                return
-
         # 长度验证
         if contains or charCount > max_length:
             returnData = MessData(ErrorCode.name_illegal)
