@@ -80,7 +80,6 @@ class SignHandler(tornado.web.RequestHandler):
         cdkey = dictData.get('cdkey', '')
         returnData = MessData()
         player = None
-        open_activate = True
 
         # 账户验证
         name = name.strip()
@@ -121,13 +120,6 @@ class SignHandler(tornado.web.RequestHandler):
 
         if player != None:                          # 重置离线奖励
             player.offlineCash = 0
-
-            # 使用cdkey
-            if open_activate is True:
-                cdkey_obj.is_use = True
-                cdkey_obj.usedtime = datetime.datetime.now()
-                cdkey_obj.use_udid = udid
-                cdkey_obj.save()
 
         self.write(message)
         self.finish()
