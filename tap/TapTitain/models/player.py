@@ -65,8 +65,7 @@ class PlayerInfo:
         self.login_num = data[27]
         self.login_get_gifts_status = json.loads(data[28])
 
-        if data[29] == "0")
-        {
+        if data[29] == "0":
             self.Tutor1Finished = 0
             self.Tutor2Finished = 0
             self.Tutor3Finished = 0
@@ -74,8 +73,8 @@ class PlayerInfo:
             self.Tutor5Finished = 0
             self.Tutor6Finished = 0
             self.Tutor7Finished = 0
-        }
-        else
+        
+        else:
             tutorial = json.loads(data[29])
             self.Tutor1Finished = tutorial["1"]
             self.Tutor2Finished = tutorial["2"]
