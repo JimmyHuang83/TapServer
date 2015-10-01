@@ -65,20 +65,31 @@ class PlayerInfo:
         self.login_num = data[27]
         self.login_get_gifts_status = json.loads(data[28])
 
-        tutorial = json.loads(data[29])
-        self.Tutor1Finished = tutorial["1"]
-        self.Tutor2Finished = tutorial["2"]
-        self.Tutor3Finished = tutorial["3"]
-        self.Tutor4Finished = tutorial["4"]
-        self.Tutor5Finished = tutorial["5"]
-        try:
-            self.Tutor6Finished = tutorial["6"]
-        except:
+        if data[29] == "0")
+        {
+            self.Tutor1Finished = 0
+            self.Tutor2Finished = 0
+            self.Tutor3Finished = 0
+            self.Tutor4Finished = 0
+            self.Tutor5Finished = 0
             self.Tutor6Finished = 0
-        try:
-            self.Tutor7Finished = tutorial["7"]
-        except:
             self.Tutor7Finished = 0
+        }
+        else
+            tutorial = json.loads(data[29])
+            self.Tutor1Finished = tutorial["1"]
+            self.Tutor2Finished = tutorial["2"]
+            self.Tutor3Finished = tutorial["3"]
+            self.Tutor4Finished = tutorial["4"]
+            self.Tutor5Finished = tutorial["5"]
+            try:
+                self.Tutor6Finished = tutorial["6"]
+            except:
+                self.Tutor6Finished = 0
+            try:
+                self.Tutor7Finished = tutorial["7"]
+            except:
+                self.Tutor7Finished = 0
 
         self.udid = data[30]
 
