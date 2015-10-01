@@ -9,7 +9,7 @@ class Configration:
     def __init__(self):
         self.serverDBList = []
         self.serverPortList = []
-        self.serverDBList.append("tap_titan_game_o1")
+        self.serverDBList.append("TapTitain")
         self.serverPortList.append(16001)
         self.server_id = 1
 
