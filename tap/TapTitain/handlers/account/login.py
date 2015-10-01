@@ -1,4 +1,5 @@
 #coding=utf-8
+import logging
 import datetime
 import tornado.web
 import tornado.gen
@@ -20,7 +21,7 @@ class LoginHandler(tornado.web.RequestHandler):
 
     @tornado.web.asynchronous
     @tornado.gen.coroutine
-    def post(self):
+    def post(self):        
         bodyData = self.request.body
         dictData = MessageTools.decode(bodyData)
         udid = dictData['udid']
@@ -34,12 +35,14 @@ class LoginHandler(tornado.web.RequestHandler):
             returnData = MessData()
             player = playerDataManager.getPlayerByPlayerid(playerID)    # 登录成功，使用playerid获取玩家信息
 
-            if player == None:                                         # 玩家信息未在内存中从数据库读取
+            if player == None:
+                logging.info("player is null")                                         # 玩家信息未在内存中从数据库读取
                 player = playerDataManager.loginUseUidd(udid)
                 player.connect_id = playerDataManager.create_connect_id(player.player_id)       # 重新生成连接ID
                 returnData.data = player
                 player.server_date_time = GameTools.getDateTimeNowString()
             else:
+                logging.info("player id=%s",player.player_id)
                 player.connect_id = playerDataManager.create_connect_id(player.player_id)       # 重新生成连接ID
                 returnData.data = player
                 player.server_date_time = GameTools.getDateTimeNowString()
