@@ -60,7 +60,7 @@ CREATE TABLE `player_base_info` (
   `daily_datetime` varchar(25) DEFAULT '2015-05-1 8:00:00',
   `add_chanllenge_num` bigint(14) DEFAULT '0',
   `awake_spell_num` int(7) DEFAULT '0',
-  `last_free_draw_datetime`, varchar(25) DEFAULT '2015-10-1 8:00:00',
+  `last_free_draw_datetime` varchar(25) DEFAULT '2015-10-1 8:00:00',
   `recharge_total_num` int(7) DEFAULT '0',
   `recharge_get_gifts_status` int(7) DEFAULT '0',
   `last_login_date`, varchar(25) DEFAULT '2015-10-1 8:00:00',
