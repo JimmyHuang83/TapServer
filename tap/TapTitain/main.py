@@ -41,7 +41,6 @@ from models.log_config import LogConfing
 from handlers.opevent.cumulative_recharge_accept import CumulativeRechargeAcceptHandler
 from handlers.opevent.login_rewords_accept import LogoinRewordsAcceptHandler
 from handlers.shop.recharge import RechargeHandler
-from handlers.tutorial.finished import FinishedHandler
 from handlers.partner.use_skill import UseSkillHandler
 from handlers.cdkey.gift_use import GiftUseHandler
 
@@ -129,10 +128,7 @@ def main():
 
         # opevent
         (r"/opevent/cumulative_Recharge_reward/?", CumulativeRechargeAcceptHandler),         # 累计充值活动奖励
-        (r"/opevent/login_reward_accept/?", LogoinRewordsAcceptHandler),                      # 累计登录活动奖励
-
-        # tutorial
-        (r"/tutorial/finished/?", FinishedHandler),                                             # 完成新手引导
+        (r"/opevent/login_reward_accept/?", LogoinRewordsAcceptHandler),                      # 累计登录活动奖励                                          # 完成新手引导
 
         # gift
         (r"/cdkey/gift_use/?", GiftUseHandler),            # 使用礼包码

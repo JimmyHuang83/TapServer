@@ -109,7 +109,7 @@ class PlayerDataManager:
                  'last_cmd_time, random_reward_num, random_reward_date, ' \
                  'lastTimedRewardDatetime, last_timed_reward_ranknum, last_challenge_datetime, buy_del_challenge_cd_num,' \
                  'daily_datetime, add_chanllenge_num, awake_spell_num, last_free_draw_datetime, recharge_total_num, recharge_get_gifts_status,' \
-                 'last_login_date, login_num, login_get_gifts_status, tutorial, udid'
+                 'last_login_date, login_num, login_get_gifts_status, udid'
         condiction = "udid = '%s'" %udid
         data = db_Manager.selectDataFromTable(tableName, fileds, condiction)
         player = PlayerInfo(data[0])

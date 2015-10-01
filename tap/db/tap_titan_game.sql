@@ -66,7 +66,6 @@ CREATE TABLE `player_base_info` (
   `last_login_date` varchar(25) DEFAULT '2015-10-1 8:00:00',
   `login_num` int(7) DEFAULT '0',
   `login_get_gifts_status` varchar(27) DEFAULT '0',
-  `tutorial` varchar(25) DEFAULT '{1:0,2:0,3:0,4:0,5:0,6:0,7:0}',
   PRIMARY KEY (`playerid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
