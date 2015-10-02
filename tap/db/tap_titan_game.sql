@@ -4566,7 +4566,14 @@ INSERT INTO `table_items` VALUES ('7002', '2', '1', '0', '0', '0', '8', '102');
 INSERT INTO `table_items` VALUES ('7003', '3', '1', '0', '0', '0', '10', '102');
 INSERT INTO `table_items` VALUES ('7004', '4', '1', '0', '0', '0', '9', '102');
 INSERT INTO `table_items` VALUES ('7005', '5', '1', '0', '0', '0', '2', '102');
-
+INSERT INTO `table_items` VALUES ('8000', '8', '20', '3', '0', '0', '7', '1');
+INSERT INTO `table_items` VALUES ('8001', '5', '20', '4', '0', '0', '7', '10');
+INSERT INTO `table_items` VALUES ('8007', '8', '20', '2', '0', '0', '4', '300');
+INSERT INTO `table_items` VALUES ('8002', '8', '20', '3', '0', '0', '4', '900');
+INSERT INTO `table_items` VALUES ('8003', '8', '20', '4', '0', '0', '4', '3000');
+INSERT INTO `table_items` VALUES ('8004', '8', '20', '2', '0', '0', '3', '5');
+INSERT INTO `table_items` VALUES ('8005', '8', '20', '3', '0', '0', '3', '15');
+INSERT INTO `table_items` VALUES ('8006', '8', '20', '4', '0', '0', '3', '50');
 -- ----------------------------
 -- Table structure for table_level
 -- ----------------------------
