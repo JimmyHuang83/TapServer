@@ -6969,8 +6969,11 @@ CREATE TABLE `table_pvp_shop` (
 -- ----------------------------
 -- Records of table_pvp_shop
 -- ----------------------------
-INSERT INTO `table_pvp_shop` VALUES ('1', '1', '1', '1', '1', '1');
-
+INSERT INTO `table_pvp_shop` VALUES ('1', '8000', '2', '20', '1', '120');
+INSERT INTO `table_pvp_shop` VALUES ('2', '8007', '2', '150', '1', '1200');
+INSERT INTO `table_pvp_shop` VALUES ('3', '8001', '1', '1200', '0', '0');
+INSERT INTO `table_pvp_shop` VALUES ('4', '8002', '1', '3500', '0', '0');
+INSERT INTO `table_pvp_shop` VALUES ('5', '8003', '1', '10000', '0', '0');
 -- ----------------------------
 -- Table structure for table_random_reward
 -- ----------------------------
