@@ -221,8 +221,11 @@ CREATE TABLE `player_skill` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+SET NAMES utf8;
+SET FOREIGN_KEY_CHECKS = 0;
+
 -- ----------------------------
--- Table structure for table_buffs
+--  Table structure for `table_buffs`
 -- ----------------------------
 DROP TABLE IF EXISTS `table_buffs`;
 CREATE TABLE `table_buffs` (
@@ -234,32 +237,13 @@ CREATE TABLE `table_buffs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of table_buffs
+--  Records of `table_buffs`
 -- ----------------------------
-INSERT INTO `table_buffs` VALUES ('1', '1', '25', '0.0009', '100');
-INSERT INTO `table_buffs` VALUES ('2', '1', '25', '0.0009', '100');
-INSERT INTO `table_buffs` VALUES ('3', '1', '25', '0.0009', '100');
-INSERT INTO `table_buffs` VALUES ('4', '1', '25', '0.0009', '100');
-INSERT INTO `table_buffs` VALUES ('5', '1', '25', '0.0009', '100');
-INSERT INTO `table_buffs` VALUES ('6', '1', '25', '0.0009', '100');
-INSERT INTO `table_buffs` VALUES ('7', '1', '25', '0.0009', '100');
-INSERT INTO `table_buffs` VALUES ('8', '1', '25', '0.00009', '10');
-INSERT INTO `table_buffs` VALUES ('9', '1', '25', '0.00009', '10');
-INSERT INTO `table_buffs` VALUES ('10', '1', '25', '0.0009', '100');
-INSERT INTO `table_buffs` VALUES ('11', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('12', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('13', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('14', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('15', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('16', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('17', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('18', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('19', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('20', '1', '100', '0', '10');
-INSERT INTO `table_buffs` VALUES ('21', '1', '100', '0', '50');
-INSERT INTO `table_buffs` VALUES ('22', '1', '25', '0.00009', '10');
-INSERT INTO `table_buffs` VALUES ('23', '1', '100', '0', '100');
-INSERT INTO `table_buffs` VALUES ('24', '1', '100', '0', '100');
+BEGIN;
+INSERT INTO `table_buffs` VALUES ('1', '1', '25', '0.0009', '100'), ('2', '1', '25', '0.0009', '100'), ('3', '1', '25', '0.0009', '100'), ('4', '1', '25', '0.0009', '100'), ('5', '1', '25', '0.0009', '100'), ('6', '1', '25', '0.0009', '100'), ('7', '1', '25', '0.0009', '100'), ('8', '1', '25', '0.00009', '10'), ('9', '1', '25', '0.00009', '10'), ('10', '1', '25', '0.0009', '100'), ('11', '1', '100', '0', '60'), ('12', '1', '100', '0', '50'), ('13', '1', '100', '0', '100'), ('14', '1', '100', '0', '60'), ('15', '1', '100', '0', '100'), ('31', '1', '100', '0', '100'), ('32', '1', '100', '0', '50'), ('33', '1', '100', '0', '50'), ('34', '1', '100', '0', '50'), ('35', '1', '100', '0', '100'), ('21', '1', '100', '0', '80'), ('22', '1', '25', '0.00009', '10'), ('23', '1', '100', '0', '100'), ('24', '1', '100', '0', '50');
+COMMIT;
+
+SET FOREIGN_KEY_CHECKS = 1;
 
 -- ----------------------------
 -- Table structure for table_eqp_deputbuffs

@@ -1163,5 +1163,5 @@ class PlayerInfo:
             self.login_num += 1
 
             # 封测活动奖励
-            self.addResource(ResourceType.gems, 500)
+            #self.addResource(ResourceType.gems, 500)
 
