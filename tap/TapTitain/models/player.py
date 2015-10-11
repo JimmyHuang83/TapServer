@@ -1074,7 +1074,7 @@ class PlayerInfo:
 
     def saveEquipments(self):
         posList = []
-        for index in range(12):
+        for index in range(300):
         # for index in range(6):
             posList.append(index)
         # posList.append(10)
